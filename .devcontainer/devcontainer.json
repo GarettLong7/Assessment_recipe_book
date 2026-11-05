@@ -1,0 +1,11 @@
+
+{
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Recipe Book API",
+      "onAutoForward": "openBrowser",
+      "visibility": "public"
+    }
+  }
+}
