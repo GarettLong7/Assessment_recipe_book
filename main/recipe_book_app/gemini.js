@@ -41,13 +41,13 @@ Example output: {"cuisines":["Italian"],"ingredients":["chicken","garlic"],"tags
 Example input: "quick no meat dinner"
 Example output: {"cuisines":[],"ingredients":[],"tags":["quick","easy","vegetarian","vegan","dinner"]}
 
-User's query: ${query}
 `;
 
     const aiResponse = await ai.models.generateContent({
         model: MODEL,
-        contents: systemPrompt,
+        contents: query,
         config: {
+            systemInstruction: systemPrompt,
             responseMimeType: "application/json",
             responseJsonSchema: {
                 type: "object",
@@ -111,13 +111,13 @@ Rules:
 - Provide clear, step-by-step cooking instructions.
 - Return ONLY valid JSON.
 
-User's recipe request: ${recipeText}
 `;
 
     const aiResponse = await ai.models.generateContent({
         model: MODEL,
-        contents: systemPrompt,
+        contents: recipeText,
         config: {
+            systemInstruction: systemPrompt,
             responseMimeType: "application/json",
             responseJsonSchema: {
                 type: "object",

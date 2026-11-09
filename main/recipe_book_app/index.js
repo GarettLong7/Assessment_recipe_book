@@ -573,6 +573,40 @@ async function main() {
             }
         });
 
+        // DELETE A SPECIFIC RECIPE
+        app.delete("/recipes/:id", async (req, res) => {
+            try {
+                const recipeId = req.params.id;
+
+                if (!ObjectId.isValid(recipeId)) {
+                    return res.status(400).json({
+                        error: "Invalid recipe ID"
+                    });
+                }
+
+                const result = await db.collection("recipes")
+                    .deleteOne({
+                        _id: new ObjectId(recipeId)
+                    });
+
+                if (result.deletedCount === 0) {
+                    return res.status(404).json({
+                        error: "Recipe not found"
+                    });
+                }
+
+                res.json({
+                    message: "Recipe deleted successfully"
+                });
+
+            } catch (error) {
+                console.error("Error deleting recipe:", error);
+
+                res.status(500).json({
+                    error: "Internal server error"
+                });
+            }
+        });
 
         // LAB 9 - AI RECIPE SEARCH
         app.get("/ai/recipes", async function (req, res) {
