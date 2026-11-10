@@ -106,3 +106,11 @@ which Express uses to build MongoDB queries.
 
 Gemini can also generate structured recipe data that the API
 saves to MongoDB.
+
+## Deployed API
+
+Base URL:
+https://recipe-book-api-t54p.onrender.com
+
+Example:
+GET https://recipe-book-api-t54p.onrender.com/recipes
