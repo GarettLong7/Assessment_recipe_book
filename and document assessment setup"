@@ -1,0 +1,12 @@
+ README.md                                         | 109 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m[31m-[m
+ {lab01 => main}/.gitignore                        |   0
+ {lab01 => main}/index.js                          |   0
+ {lab01 => main}/package-lock.json                 |   0
+ {lab01 => main}/package.json                      |   0
+ {lab01 => main}/recipe_book_app/db.js             |   0
+ {lab01 => main}/recipe_book_app/gemini.js         |   8 [32m++++[m[31m----[m
+ {lab01 => main}/recipe_book_app/generateSecret.js |   0
+ {lab01 => main}/recipe_book_app/index.js          |  34 [32m++++++++++++++++++++++++++++++++++[m
+ {lab01 => main}/recipe_book_app/package-lock.json | 101 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m[31m-[m
+ {lab01 => main}/recipe_book_app/package.json      |   4 [32m+++[m[31m-[m
+ 11 files changed, 249 insertions(+), 7 deletions(-)
